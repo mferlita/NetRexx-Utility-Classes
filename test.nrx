@@ -1,0 +1,39 @@
+
+---------- Strings --------------------------------------------------------------
+letters = "aBcCdDeEfF"
+
+SAY "Strings"
+SAY NrxString.capitalize(letters)
+SAY NrxString.swapCase(letters)
+SAY
+---------- Math -----------------------------------------------------------------
+SAY "Random Number Generator"
+SAY NrxMath.randNum() "no input"
+SAY NrxMath.randNum() "no input"
+SAY NrxMath.randNum() "no input"
+SAY
+SAY NrxMath.randNum(12) "min 12, max default"
+SAY NrxMath.randNum(0,12) "min 12, max default"
+SAY
+SAY NrxMath.randNum(1930,1950) "Range: 1930 - 1950"
+SAY
+SAY NrxMath.randNum(0,1) "Decimal between 0 and 1"
+SAY NrxMath.randNum(0,1) "Decimal between 0 and 1"
+SAY NrxMath.randNum(0,1) "Decimal between 0 and 1"
+
+SAY NrxMath.randNum(1) "min 1, max default"
+
+SAY NrxMath.randNum(0,999999999) "min 0, max 999,999,999"-- 999,999,999
+SAY
+
+SAY "Setting the seed"
+SAY NrxMath.randNum(0,0,1976)
+SAY NrxMath.randNum(0,100)
+SAY NrxMath.randNum(0,100)
+SAY NrxMath.randNum(0,100)
+SAY
+SAY NrxMath.randNum(0,0,1976)
+SAY NrxMath.randNum(0,100)
+SAY NrxMath.randNum(0,100)
+SAY NrxMath.randNum(0,100)
+SAY

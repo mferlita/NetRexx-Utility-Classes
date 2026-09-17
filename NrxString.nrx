@@ -1,0 +1,18 @@
+CLASS NrxString SHARED
+  PROPERTIES PRIVATE STATIC
+---------- capitalize ----------------------------------------------------------- 
+-- Capitalizes the first character of a string and lowercases the rest
+
+  METHOD capitalize(stringy=Rexx) PUBLIC STATIC
+    IF stringy = "" THEN
+      RETURN stringy
+      
+    RETURN stringy.left(1).upper || stringy.substr(2).lower
+---------- swapCase -------------------------------------------------------------
+-- Switches the case in a string. Lowercase becomes upper, upper becomes lower.
+
+  METHOD swapCase(stringy=Rexx) PUBLIC STATIC
+    uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lowercase = "abcdefghijklmnopqrstuvwxyz"
+    
+    RETURN translate(stringy, lowercase || uppercase, uppercase || lowercase)
