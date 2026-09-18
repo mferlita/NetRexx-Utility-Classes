@@ -1,4 +1,4 @@
-CLASS NrxMath SHARED
+CLASS NrxMath PUBLIC
   PROPERTIES PRIVATE STATIC
     randy = java.util.Random()
 
