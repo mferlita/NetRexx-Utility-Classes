@@ -1,5 +1,6 @@
 CLASS NrxString SHARED
   PROPERTIES PRIVATE STATIC
+  
 ---------- capitalize ----------------------------------------------------------- 
 -- Capitalizes the first character of a string and lowercases the rest
 
@@ -8,6 +9,7 @@ CLASS NrxString SHARED
       RETURN stringy
       
     RETURN stringy.left(1).upper || stringy.substr(2).lower
+    
 ---------- swapCase -------------------------------------------------------------
 -- Switches the case in a string. Lowercase becomes upper, upper becomes lower.
 

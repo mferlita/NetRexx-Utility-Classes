@@ -1,0 +1,97 @@
+CLASS NrxArray PUBLIC
+  PROPERTIES PRIVATE
+
+  list = ArrayList()
+
+---------- NrxArray --------------------------------------------------------------
+-- Construct a dynamic array
+
+  METHOD NrxArray(items = Rexx[] null) PUBLIC 
+    IF items \= null THEN DO
+      LOOP element = 1 TO items.length - 1
+        list.add(items[element])
+      END
+    END
+    
+    RETURN
+
+---------- items ----------------------------------------------------------------
+-- Returns the number of items/elements in an array
+
+  METHOD items() PUBLIC returns int
+    RETURN list.size
+
+----------- isEmpty -------------------------------------------------------------
+-- checks to see if the array is empty. Returns 1 if true.
+
+  METHOD isEmpty() PUBLIC returns boolean
+    RETURN list.isEmpty
+  
+---------- at ------------------------------------------------------------------
+-- Read the array at the specified index
+
+  METHOD at(index = int) PUBLIC returns Rexx
+    IF (index >= 0) & (index < list.size) THEN
+      RETURN list.get(index).toString() 
+    RETURN null
+
+---------- put ------------------------------------------------------------------
+-- Write to the array at the specified index
+
+  METHOD put(index = int, item = Rexx) PUBLIC returns NrxArray
+    IF index >= 0 THEN DO
+      LOOP WHILE list.size <= index
+        list.add('')
+      END
+      list.set(index, item)
+    END
+    RETURN this
+
+---------- last -----------------------------------------------------------------
+-- Where is the last valid index
+
+  METHOD last() PUBLIC returns int
+    RETURN list.size - 1
+
+---------- lastItem -------------------------------------------------------------
+-- What is at the last valid index
+
+  METHOD lastItem() PUBLIC returns Rexx
+    IF list.isEmpty THEN
+      RETURN null
+    RETURN list.get(list.size - 1).toString()
+
+---------- append ---------------------------------------------------------------
+-- Add an element to the end of the array
+
+  METHOD append(item = Rexx) PUBLIC returns NrxArray
+    list.add(item)
+    RETURN this
+
+---------- remove ---------------------------------------------------------------
+-- remove the last element in the array
+
+  METHOD remove(index = int) PUBLIC returns Rexx
+    if (index >= 0) & (index < list.size) THEN
+      RETURN Rexx list.remove(index).toString()
+    RETURN null
+
+---------- sort -----------------------------------------------------------------
+-- sort the array in-place, lexicographically
+
+  METHOD sort() PUBLIC returns NrxArray
+    Collections.sort(list)
+    RETURN this
+
+---------- join -----------------------------------------------------------------
+-- join elements of the array with a custom seperator
+
+  METHOD join(separator = Rexx ', ') PUBLIC returns String
+    result = ''
+    first = 1
+    LOOP index = 0 TO list.size - 1
+      IF \first THEN result = result || separator
+      result = result || list.get(index).toString()
+      first = 0
+    END
+    RETURN result

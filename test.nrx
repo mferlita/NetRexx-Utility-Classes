@@ -37,3 +37,45 @@ SAY NrxMath.randNum(0,100)
 SAY NrxMath.randNum(0,100)
 SAY NrxMath.randNum(0,100)
 SAY
+---------- Arrays ---------------------------------------------------------------
+SAY "arrays"
+
+-- Create empty
+a = NrxArray()
+
+-- Create with values
+b = NrxArray([10, 20, 30, 40, 50])
+
+-- Size
+say b.items
+say b.isEmpty
+
+-- Read
+say b.at(0)
+say b.at(2)
+say b.last
+say b.lastItem
+
+-- Write
+b.put(0, 99)
+say b.at(0)         
+
+-- Append
+b.append(60)
+say b.items
+say b.lastItem
+
+-- Remove at index
+b.remove(0)
+say b.at(0)
+
+-- Sort
+c = NrxArray([5, 3, 8, 1, 9])
+c.sort()
+say c.join(', ')
+
+-- Join with custom separator
+say c.join(' | ')
+
+-- Join with default (newline)
+say c.join      
