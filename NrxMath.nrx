@@ -9,7 +9,6 @@ CLASS NrxMath PUBLIC
   METHOD randNum(min = 0, max = 2147483646, seed = 0) PUBLIC STATIC
   IF seed > 0 THEN 
     randy.setSeed(seed)
-    
   IF min = 0 & max = 1 THEN
     RETURN randy.nextDouble()
   ELSE

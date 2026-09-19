@@ -12,7 +12,6 @@ CLASS NrxArray PUBLIC
         list.add(items[element])
       END
     END
-    
     RETURN
 
 ---------- items ----------------------------------------------------------------

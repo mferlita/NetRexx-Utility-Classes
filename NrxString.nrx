@@ -5,8 +5,7 @@ CLASS NrxString PUBLIC
 
   METHOD capitalize(stringy = Rexx) PUBLIC STATIC
     IF stringy = "" THEN
-      RETURN stringy
-      
+      RETURN stringy  
     RETURN stringy.left(1).upper || stringy.substr(2).lower
     
 ---------- swapCase -------------------------------------------------------------
@@ -15,5 +14,4 @@ CLASS NrxString PUBLIC
   METHOD swapCase(stringy = Rexx) PUBLIC STATIC
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     lowercase = "abcdefghijklmnopqrstuvwxyz"
-    
     RETURN stringy.translate(uppercase || lowercase, lowercase || uppercase)
