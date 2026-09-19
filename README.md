@@ -8,5 +8,5 @@ I'll need to write the whole thing.
 
 Suggestions and helpful criticism are welcome!
 
-Thanks,
+Thanks,  
 Matt
