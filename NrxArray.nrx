@@ -1,3 +1,5 @@
+package NrxUtil
+
 CLASS NrxArray PUBLIC
   PROPERTIES PRIVATE
 
@@ -20,12 +22,6 @@ CLASS NrxArray PUBLIC
   METHOD items() PUBLIC returns int
     RETURN list.size
 
------------ isEmpty -------------------------------------------------------------
--- checks to see if the array is empty. Returns 1 if true.
-
-  METHOD isEmpty() PUBLIC returns boolean
-    RETURN list.isEmpty
-  
 ---------- at ------------------------------------------------------------------
 -- Read the array at the specified index
 

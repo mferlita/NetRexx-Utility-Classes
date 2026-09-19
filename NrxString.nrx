@@ -1,3 +1,5 @@
+package NrxUtil
+
 CLASS NrxString PUBLIC
   
 ---------- capitalize ----------------------------------------------------------- 
