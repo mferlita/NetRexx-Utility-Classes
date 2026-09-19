@@ -1,6 +1,6 @@
 package NrxUtil
 
-CLASS NrxArray PUBLIC
+CLASS NrxArray PUBLIC extends java.util.ArrayList
   PROPERTIES PRIVATE
 
   list = ArrayList()
